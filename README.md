@@ -1,4 +1,4 @@
-## Levo App
+## App de produtos
 
 App de delivery de produtos onde serão expostas todas categorias de produtos.
 
