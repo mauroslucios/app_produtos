@@ -1,0 +1,36 @@
+{{#each erros}}
+<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+    {{texto}}
+    <button type="button" class="btn-close close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{else}}
+
+{{/each}}
+<h3>Edição de categoria de Produtos</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/categoria/edit" method="POST">
+        <input type="hidden" name="id" value="{{categoria._id}}">
+            <div class="form-group">
+                <label for="nome" class="mt-2">Tipo:</label>
+                <!--<input type="text" class="form-control mt-2" id="tipo" name="tipo" value="{{categoria.tipo}}">-->
+                <select name="tipo" id="tipo" class="form-select" aria-label="Default select example">
+                    <option selected>Selecione uma opção</option>
+                    <option value="eletrodomestico">Eletrodoméstico</option>
+                    <option value="comida">Comida</option>
+                    <option value="bebida">Bebida</option>
+                    <option value="vestuario">Vestuário</option>
+                    <option value="automobilistico">Automobilístico</option>
+                    <option value="aereo">Aeroviário</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sku" class="mt-2">SKU:</label>
+                <input type="text" class="form-control mt-2" id="sku" name="sku" value="{{categoria.sku}}">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary mt-2">Confirmar Edição</button>
+            </div>
+        </form>
+    </div>
+</div>
