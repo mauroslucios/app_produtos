@@ -1,0 +1,22 @@
+.initial {
+  display: flex;
+  justify-content: space-around;
+  align-items: initial;
+}
+.menu {
+  background-color: #ef5350;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+nav img {
+  width: 100px;
+  margin-left: 50px;
+}
