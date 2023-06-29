@@ -16,7 +16,19 @@ App de delivery de produtos onde serão expostas todas categorias de produtos.
 - bootboxjs
 - google fonts
 
+### Comandos
+- k3d cluster create devopscloud
+- k3d cluster create devopscloud --servers 3 --agents 3
+- k3d cluster list
+- k3d cluster delete <nome>
+- kubetcl get nodes
+- kubectl get pod
+- kubectl get pod -o wide
+- kubectl describe pods
+- kubectl apply -f pods.yml
+- kubectl port-forward pod/devopscloud 3000:3000
 ### Imagens
+![Screenshot from 2023-06-29 02-14-38](https://github.com/mauroslucios/app_produtos/assets/671694/f572a464-3600-4285-bf1b-d100bf28b985)
 ![Screenshot from 2023-06-29 02-02-09](https://github.com/mauroslucios/app_produtos/assets/671694/e90a00ce-4cbb-4b1d-946a-cdfd0b6dd3f2)
 ![Screenshot from 2023-06-29 02-00-22](https://github.com/mauroslucios/app_produtos/assets/671694/e9b4e158-ad46-44a1-985c-503b1a33211c)
 ![Screenshot from 2023-06-29 02-00-07](https://github.com/mauroslucios/app_produtos/assets/671694/77d3b0b4-5855-4422-af55-5a96032a7625)
