@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploymentdevopscloud
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: devopscloud
+  template:
+    metadata:
+      labels:
+        app: devopscloud
+    spec:
+      containers:
+        - name: appnodejs
+          image: mauroslucios/node-web-app:1.0
+          ports:
+          - containerPort: 3000
