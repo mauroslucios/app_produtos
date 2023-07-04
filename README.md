@@ -1,6 +1,6 @@
-## App de produtos
+##  CRUD de produtos e categorias
 
-App de delivery de produtos onde serão expostas todas categorias de produtos.
+Cadastro de produtos onde serão expostas as categorias.
 
 ### Tecnologias
 
@@ -10,12 +10,13 @@ App de delivery de produtos onde serão expostas todas categorias de produtos.
 - body-parser
 - connect-flash
 - express-session
-- mongodb(dockerizado)
-- docker
 - fontawesome
 - bootboxjs
 - google fonts
-
+- mongodb(dockerizado)
+- docker
+- K3d
+- Kubernetes
 ### Comandos
 - k3d cluster create devopscloud
 - k3d cluster create devopscloud --servers 3 --agents 3
@@ -28,6 +29,9 @@ App de delivery de produtos onde serão expostas todas categorias de produtos.
 - kubectl apply -f pods.yml
 - kubectl port-forward pod/devopscloud 3000:3000
 - k3d cluster create devopscloud --servers 3 --agents 3 -p "3000:30000@lodabalancer" -p "8080:30001@loadbalancer"
+- docker container ls
+- docker login
+- docker push mauroslucios/node-web-app:1.0
 ### Imagens
 ![Screenshot from 2023-06-29 02-14-38](https://github.com/mauroslucios/app_produtos/assets/671694/f572a464-3600-4285-bf1b-d100bf28b985)
 ![Screenshot from 2023-06-29 21-18-08](https://github.com/mauroslucios/app_produtos/assets/671694/da9d2cee-212b-4154-998e-fb5d5ef9fe31)
