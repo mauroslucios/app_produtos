@@ -27,6 +27,7 @@ App de delivery de produtos onde serão expostas todas categorias de produtos.
 - kubectl describe pods
 - kubectl apply -f pods.yml
 - kubectl port-forward pod/devopscloud 3000:3000
+- k3d cluster create devopscloud --servers 3 --agents 3 -p "3000:30000@lodabalancer" -p "8080:30001@loadbalancer"
 ### Imagens
 ![Screenshot from 2023-06-29 02-14-38](https://github.com/mauroslucios/app_produtos/assets/671694/f572a464-3600-4285-bf1b-d100bf28b985)
 ![Screenshot from 2023-06-29 21-18-08](https://github.com/mauroslucios/app_produtos/assets/671694/da9d2cee-212b-4154-998e-fb5d5ef9fe31)
