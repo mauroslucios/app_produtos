@@ -11,6 +11,6 @@ jobs:
       - name: Using Node.js
         uses: actions/setup-node@v2
       - name: run install, build
-        run: |
+        run: | 
           npm install
           npm run build
