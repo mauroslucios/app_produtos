@@ -5,13 +5,12 @@ on:
 jobs:
   continuos-integration:
     runs-on: ubuntu-latest
+    container: node:16-alpine
     steps:
       - uses: actions/checkout@v3
-      - name: Usinga Node.js
+      - name: Using Node.js
         uses: actions/setup-node@v2
-        with:
-          node-version: 16.
-      - name: run install, build 
+      - name: run install, build
         run: |
           npm install
           npm run build
