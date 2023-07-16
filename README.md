@@ -17,6 +17,7 @@ Cadastro de produtos onde serão expostas as categorias.
 - docker
 - K3d
 - Kubernetes
+- Github Actions
 ### Comandos
 - k3d cluster create devopscloud
 - k3d cluster create devopscloud --servers 3 --agents 3
