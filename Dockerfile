@@ -1,5 +1,5 @@
 FROM node:16.14.0
-MAINTAINER mauroslucios
+MAINTAINER mauroslucios@gmail.com
 RUN mkdir -p /var/www/app/node_modules && chown -R node:node /var/www/app
 WORKDIR /var/www/app
 COPY package.json ./
