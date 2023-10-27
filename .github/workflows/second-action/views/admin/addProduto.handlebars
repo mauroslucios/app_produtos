@@ -1,0 +1,43 @@
+{{#each erros}}
+    <div class="alert aert-danger fade show alert-dismissible" id="success-aler" role="alert">
+        {{texto}}
+        <button class="btn-close close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{{else}}
+
+{{/each}}
+<h3 class="mt-2">Cadastro de Produtos</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/produtos/novo" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nome" class="mt-2">Produto:</label>
+                <input type="text" class="form-control mt-2" id="nome" name="nome" placeholder="Nome do Produto">
+                <select name="categoria" id="categoria" class="form-select mt-2" aria-label="Default select example">
+                    <option selected>Selecione uma Categoria na lista</option>
+                    {{#each categorias}}
+                        <option value="{{_id}}">{{tipo}}</option>
+                    {{else}}
+                    <option value="0">Nenhuma categoria registrada</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="preco" class="mt-2">Preço:</label>
+                <input type="text" class="form-control mt-2" id="preco" name="preco" placeholder="R$ 000.00">
+            </div>
+            <div class="form-group" class="mt-2">
+                <label for="img_produto">Imagem do produto:</label>
+                <input type="file" class="form-control mt-2" id="img_produto" name="img_produto">
+            </div>
+            <div class="form-group">
+                <label for="descricao" class="mt-2">Descrição</label>
+                <textarea class="form-control" id="descricao" name="descricao" rows="3"></textarea>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary mt-2">Cadastrar</button>
+                <a href="/admin/produtos" class="btn btn-danger mt-2">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
