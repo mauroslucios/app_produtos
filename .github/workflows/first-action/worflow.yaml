@@ -3,7 +3,6 @@ on: push
 jobs:
   continuos-integration:
     runs-on: ubuntu-latest
-    container: node:16-alpine
     steps:
       - name: Get code
         uses: actions/checkout@v3
