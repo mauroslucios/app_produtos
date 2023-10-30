@@ -174,7 +174,7 @@ router.post('/produtos/novo',upload.single('foto'), (req, res, err, next) => {
             preco:req.body.preco,
             descricao: req.body.conteudo,
             img_produto: req.body.img_produto,
-            categoria: req.body.categorias
+            categoria: req.body.categoria
         
         }
         new Produto(novoProduto).save().then(() => {
